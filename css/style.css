@@ -22,8 +22,12 @@ a{
 ===========================================================*/
 
 #navbar{
-  background-color: #fb742c;
+  text-align: center;
+  background-color: #f6861f;
   padding:10px;
+  margin-top: 20px;
+  border-top: solid 3px black;
+  border-bottom: solid 3px black;
 }
 
 #navbar a{
@@ -45,49 +49,109 @@ a{
 
 /*cette classe donne un background orange aux sections voulus*/
 .section_orange{
-  background-color: #fb742c;
+  border-top: solid 4px black;
+  background-color: #f6861f;
 }
 
 /*DERNIER MATCH*/
-.section_dernier_matche{
-  padding: 60px;
-}
-
-.section_dernier_matche article{
-}
-
-.section_dernier_matche article h3{
+.section_dernier_match{
   text-align: center;
+  padding:40px;
 }
 
-.section_dernier_matche article h4{
-  text-align: center;
-
+.section_dernier_match h3{
+  margin-bottom: 80px;
+  font-size: 35px;
 }
 
-.section_dernier_matche article h5{
-  color:#fb742c;
-  margin-top: -20px;
-  text-align: center;
+
+.section_dernier_match article{
+  display:flex;
+  justify-content:center;
 }
+
+.section_dernier_match article .score_div p:first-child{
+  background-color:#f6861f;
+  color:white;
+  font-weight: bold;
+  font-size: 80px;
+  margin:0px;
+  padding:0px 50px;
+}
+
+
+/*le VS*/
+.section_dernier_match article p:nth-child(2) {
+  margin: 20px;
+  padding: 0px;
+  font-size: 50px;
+  font-weight: bolder;
+  border-top: solid 4px #f6861f;
+  border-bottom: solid 4px #f6861f;
+}
+
+/*les deux images des scores*/
+.section_dernier_match article .score_div .score_final_img_1{
+  transform: translate(-200px, -160px);
+  position:absolute;
+}
+.section_dernier_match article .score_div .score_final_img_2{
+  transform: translate(40px, -160px);
+  position:absolute;
+}
+
+.section_dernier_match h4{
+  font-size: 25px;
+  margin-bottom: -5px;
+}
+
+.section_dernier_match h5{
+  margin-top: 0px;
+  color:#f6861f;
+  font-size: 20px;
+}
+
+
+
 
 
 /*LES MATCHS*/
-.section_les_matches{
-  height:350px;
-  display: flex;
+.section_les_matchs{
+  padding:50px;
 }
 
-.section_les_matches .prochain_match{
+.section_les_matchs .prochain_match_VS{
+  display:flex;
+}
+
+.section_les_matchs .prochain_match div{
   text-align: center;
+  background-color: rgba(0, 0, 0, 0.2);
+  border-top: solid 8px #ffe0ca;
+  padding:10px;
 }
 
-.section_les_matches .prochain_match .prochain_match_VS{
-  display: flex;
+.section_les_matchs .prochain_match div h5{
+  margin: auto;
 }
 
-.section_les_matches .prochain_match h4{
-  
+
+.section_les_matchs .match_a_venir{
+  width: auto;
+  margin: auto;
+}
+
+.section_les_matchs .match_a_venir thead{
+  font-weight: bold;
+}
+
+.section_les_matchs .match_a_venir td{
+  text-align: center;
+  padding:15px 25px;
+}
+
+.section_les_matchs .match_a_venir tbody tr:nth-child(2n+1){
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 
