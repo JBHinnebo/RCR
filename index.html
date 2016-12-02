@@ -18,182 +18,81 @@
         <link rel="stylesheet" href="css/style.css">
         <script src="js/vendor/modernizr-2.8.3.min.js"></script>
     </head>
-    <body id=container>
-        <!--[if lt IE 8]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-        <![endif]-->
 
-        <!-- Add your site or application content here -->
+
+    <body>
+
         <header>
-            <navbar id="navbar">
 
-                <figure>
-                    <img src="" alt="logo RCR">
-                </figure>
-
+            <nav id="navbar">
                 <ul>
                     <li>
+                        <a href="index.html"><img src="img/logo_RCR" alt="logo RCR"></a>
+                    </li>
+                    <li>
                         <a href="index.html">Accueil</a>
                     </li>
                     <li>
-                        <a href="Equipe.html">Equipe</a>
+                        <a href="">Equipes</a>
                     </li>
                     <li>
-                        <a href="Galerie.html">Galerie</a>
+                        <a href="">Notre Club</a>
                     </li>
                     <li>
-                        <a href="Histoire.html">Historique</a>
-                    </li>
-                    <li>
-                        <a href="Contact.html">Contact</a>
+                        <a href="">Contact</a>
                     </li>
                 </ul>
-            </navbar>
+            </nav>
+
         </header>
-            <div class="slideshow-container">
-                <div class="mySlides fade">
-                  <div class="numbertext">1 / 3</div>
-                  <img src="img/625520_693059137389368_324104345_n.jpg" style="width:100%">
-                  <div class="text">Caption Text</div>
-                </div>
 
-                <div class="mySlides fade">
-                  <div class="numbertext">2 / 3</div>
-                  <img src="img/1520619_812157235479557_5335015180729244239_n.jpg" style="width:100%">
-                  <div class="text">Caption Two</div>
-                </div>
+        <main>
 
-                <div class="mySlides fade">
-                  <div class="numbertext">3 / 3</div>
-                  <img src="img/14990930_1413699891991952_1743099457007163555_o.jpg" style="width:100%">
-                  <div class="text">Caption Three</div>
-                </div>
+            <!-- Sliders -->
+            <section id="sliders_actualite">
 
-                <a class="prev" onclick=plus(-1)>&#10094;</a>
-                <a class="next" onclick=plus(1)>&#10095;</a>
-                <br>
-                <div id="bouttons" style="text-align:center">
-                 <!-- <span class="dot" onclick="actuel(0)"></span>
-                 <span class="dot" onclick="actuel(1)"></span>
-                 <span class="dot" onclick="actuel(2)"></span> -->
-                </div>
-            </div>
-
-        <script>
-
-            // créer l'index
-            var SlideIndex = 0;
-            var images = document.getElementsByClassName("mySlides");
-            var Div = document.getElementById('bouttons');
-            var point ;
+            </section>
 
 
-            doting();
-            // montrer l'index
-            Showimage();
+            <!-- Dernier match -->
+            <section class="section_dernier_matche">
 
-            // créer les points
-            function doting(){
+                <article>
+                    <h3>DERNIER MATCH</h3>
 
-                for (i=0; i<images.length; i++){
+                    <h4>26 Septembre 2016</h4>
+                    <h5>Stade de ROUBAIX</h5>
+                </article>
 
-                    var dot = document.createElement('span');
-                    dot.className = "dot";
-                    dot.setAttribute("onclick", "actuel("+i+")");
-                    Div.appendChild(dot);
-                }
-                    point = document.getElementsByClassName("dot");
-            }
-
-            // La fonction montrant l'image
-            function plus(num){
-                SlideIndex+=num;
-                Showimage();
-                console.log(point);
-            }
-
-            function actuel(num){
-                SlideIndex=num;
-                Showimage();
-            }
-
-            function Showimage(){
-
-                // Pour que l'image revienne à zéro
-                if (SlideIndex > images.length-1) {
-                    SlideIndex = 0;
-                }
-                // Pour que le bouton précédent amène à la dèrnière image
-                if (SlideIndex < 0) {
-                    SlideIndex = images.length-1;
-                }
-
-                // cacher les images
-                for(i=0; i<images.length; i++){
-                    images[i].style.display="none";
-                }
-                // cacher les classes actives des points
-                for (i = 0; i < point.length; i++) {
-                    point[i].className =
-                    point[i].className.replace(" active", "");
-                }
-                  // montrer l' image
-                images[SlideIndex].style.display = "block";
-                  //activé le petit dot
-                point[SlideIndex].className += " active";
+            </section>
 
 
-            }
+            <!-- Agenda des match -->
+            <section class="section_orange section_les_matches">
 
-        </script>
+                <article class="prochain_match">
+                    <h3>PROCHAIN MATCH</h3>
+                    <figure class="prochain_match_VS">
+                        <img src="" alt="logo club">
+                            <h4>VS</h4>
+                        <img src="" alt="logo club">
+                    </figure>
+                    <div>
+                        <h5>RCR</h5>
+                        <h5>RCR</h5>
+                    </div>
 
+                </article>
 
+                <article>
+                    <h3>MATCH A VENIR</h3>
+                </article>
 
-        <main id="prinipale">
-
-            <figure id="carrousel">
-
-            </figure>
-
-
-
-
-
-
-
-            <footer id="footer">
-
-
-                <section class="contact_footer">
-
-
-
-                    <ul>
-                        <li></li>
-                    </ul>
-                </section>
-
-
-                <ul id="planDeSite">
-                    <li>
-                        <a href="index.html">Accueil</a>
-                    </li>
-                    <li>
-                        <a href="Equipe.html">Equipe</a>
-                    </li>
-                    <li>
-                        <a href="Galerie.html">Galerie</a>
-                    </li>
-                    <li>
-                        <a href="Histoire.html">Historique</a>
-                    </li>
-                    <li>
-                        <a href="Contact.html">Contact</a>
-                    </li>
-                </ul>
-            </footer>
+            </section>
 
         </main>
+
+
 
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
