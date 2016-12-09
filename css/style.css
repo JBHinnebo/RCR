@@ -16,35 +16,39 @@ a{
   text-decoration: none;
 }
 
+button{
+  background: none;
+  border: none;
+  transition: transform 0.4s;
+}
+
+button:hover{
+  transform: scale(1.3);
+}
+
+button:focus{
+  background-color: rgba(0, 0, 0, 0.0);
+}
+
 
 /*===========================================================
                           HEADER
 ===========================================================*/
 
-#logo_front{
-  position: absolute;
-  transform: translate(-55px , -50px);
-}
-
 #navbar{
-  text-align: center;
+  height: 70px;
+  margin-top: 40px;
   background-color: #f6861f;
-  padding:10px;
-  margin-top: 50px;
-  border-top: solid 3px black;
-  border-bottom: solid 3px black;
+  position: relative;
 }
-
-#navbar li{
-  margin:10px;
-}
-
 #navbar a{
-  color:white;
-  font-size: 30px;
+  font-size: 20px;
   font-weight: bolder;
 }
-
+.brand-logo{
+  position:absolute;
+  z-index: 100;
+}
 
 /*===========================================================
                           FOOTER
@@ -57,6 +61,100 @@ a{
 /*===========================================================
                            ACCUEIL
 ===========================================================*/
+
+
+/*SLIDERS*/
+
+#carroussel{
+  position:relative;
+  margin:0;
+}
+
+.article_carroussel{
+  padding: 150px 50px 40px 50px;
+}
+
+.article_carroussel h1{
+  background-color:rgba(0, 0, 0, 0.6);
+  color:white;
+  padding:10px 20px;
+  margin-bottom: 0;
+  font-size: 27px;
+  width:300px;
+}
+
+.article_carroussel h2{
+  background-color:#f6861f;
+  color:white;
+  padding:10px 30px;
+  margin-top: 5px;
+  font-size: 45px;
+  width:400px;
+}
+
+.article_carroussel p{
+  font-size: 18px;
+  color: white;
+}
+
+.article_carroussel h3{
+  color:white;
+  padding:10px 15px;
+  font-size: 29px;
+}
+
+.article_carroussel h4{
+  background-color:#f6861f;
+  color:white;
+  padding:10px 15px;
+  font-size: 25px;
+  width:200px;
+}
+
+.button:visited{
+  background-color: none;
+}
+
+.button_float_left{
+  color: white;
+  right:0;
+  position: absolute;
+  height: 100%;
+  font-size: 40px;
+}
+.button_float_right{
+  color:white;
+  left:0;
+  position: absolute;
+  height:100%;
+  font-size: 40px;
+}
+
+.carroussel_image_1{
+  background-image: url(../img/15123260_1419990508029557_8695490703272763652_o.jpg);
+  background-size:cover;
+  background-position: center;
+}
+
+.carroussel_image_2{
+  background-image: url(../img/14481934_1369922269703048_5694382966297899817_o.jpg);
+  background-size:cover;
+  background-position: center;
+}
+
+.carroussel_image_3{
+  background-image: url(../img/equipeDeDos.jpg);
+  background-size:cover;
+  background-position: center;
+}
+
+.carroussel_image_4{
+  background-image: url(../img/15110370_1419990894696185_2284442767095474723_o.jpg);
+  background-size:cover;
+  background-position: center;
+}
+
+
 
 /*cette classe donne un background orange aux sections voulus*/
 .section_orange{
@@ -124,9 +222,6 @@ a{
   color:#f6861f;
   font-size: 20px;
 }
-
-
-
 
 
 
@@ -204,25 +299,45 @@ a{
 /*LES IMAGES*/
 
 .section_images{
-  height: 400px;
+  padding-top: 80px;
+  height:450px;
 }
 
+.section_images img{
+  height: 100%;
+  width: 300px;
+}
 
 
 /*LES VIDEOS*/
 
 .section_video{
-  height: 320px;
-  padding:50px;
+  padding:30px;
   text-align: center;
 }
 
 .section_video h3{
-  margin-bottom: 80px;
-  font-size: 30px;
+  font-size: 28px;
+  font-weight: bold;
+  background-color: #ffe0ca;
+  width: 200px;
+  margin: 20px auto 40px;
+  padding: 10px;
+  margin-top: solid 5px black;
+  box-shadow: 5px 5px 5px 0px rgba(20, 0, 0, 0.2);
+}
+
+.section_video #video{
+  width:100%;
+  box-shadow: 3px 5px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+.section_video h4{
+  color:white;
 }
 
 
+/**/
 
 
 
@@ -240,6 +355,14 @@ a{
 ===========================================================*/
 
 
+#footer{
+  background-color:rgba(0, 0, 0, 0.6);
+  text-align: center;
+}
+
+.footer-copyright{
+  background:rgba(0, 0, 0, 0.9);
+}
 
 /*=========================================================*/
 /*=========================================================*/
@@ -254,12 +377,41 @@ a{
 
 
 /*Format 750px*/
-
 @media screen and (min-width: 750px){
+
+  
+
+}
+
+
+@media screen and (min-width: 989px){
+
+/*===========================================================
+                          HEADER
+===========================================================*/
+
+
+#navbar{
+  padding-left:20%;
+  padding-right:20%;
+}
+
+
 
 /*===========================================================
                           Accueil
 ===========================================================*/
+
+
+
+/*Le carroussel du dépard*/
+
+.article_carroussel{
+  padding: 150px 20% 40px 20%;
+  height:600px;
+}
+
+
 /*La section "Dernier match"*/
   .section_dernier_match article{
     display: flex;
@@ -287,5 +439,21 @@ a{
   justify-content: center;
 }
 
+/*section video*/
+.section_video #video{
+  width:650px;
+  box-shadow: 3px 5px 10px 3px rgba(0, 0, 0, 0.2);
+}
+
+
+
+/*===========================================================
+                          FOOTER
+===========================================================*/
+
+#footer{
+text-align: left;
+
+}
 
 }
