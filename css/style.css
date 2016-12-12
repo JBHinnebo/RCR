@@ -30,6 +30,13 @@ button:focus{
   background-color: rgba(0, 0, 0, 0.0);
 }
 
+li:hover{
+  background: none;
+}
+
+a:hover{
+  background: none;
+}
 
 /*===========================================================
                           HEADER
@@ -40,15 +47,34 @@ button:focus{
   margin-top: 40px;
   background-color: #f6861f;
   position: relative;
+  border-top: solid 3px black;
+  border-bottom: solid 3px black;
 }
+
 #navbar a{
   font-size: 20px;
   font-weight: bolder;
+  height:100%;
+  transition: background 0.5s,
+              color 0.5s;
 }
-.brand-logo{
+
+#dropdown1 a{
+  color:#f6861f;
+}
+
+#navbar ul a:hover{
+  background-color: #eee;
+  color:#f6861f;
+}
+
+#position_brand-logo{
   position:absolute;
+  transform: translate(-50px, -29px);
   z-index: 100;
 }
+
+
 
 /*===========================================================
                           FOOTER
@@ -72,7 +98,12 @@ button:focus{
 
 .article_carroussel{
   padding: 150px 50px 40px 50px;
+  transition: transform 0.5s;
 }
+
+/*.article_carroussel:hover{
+  transform: translateX(100%);
+}*/
 
 .article_carroussel h1{
   background-color:rgba(0, 0, 0, 0.6);
@@ -345,9 +376,74 @@ button:focus{
                            EQUIPE
 ===========================================================*/
 
+#actualite{
+  margin:80px 20px 20px;
+}
 
+#actualite article{
+  margin: 0 auto;
+}
 
+#actualite article img{
+top:0;
+right:0;
+}
 
+#actualite article h1{
+  font-size: 27px;
+  margin-bottom: -20px;
+}
+
+#actualite article h2{
+  font-size: 40px;
+  color:white;
+  background-color: #f6861f;
+  padding: 10px;
+  width
+}
+
+#actualite article h3{
+  font-size: 25px;
+}
+
+#actualite article p{
+
+}
+#horaire_portable{
+  margin:80px 5px;
+}
+
+#horaire_portable h2{
+  padding: 10px;
+}
+
+#horaire_portable thead{
+  font-size: 30px;
+}
+.tableau_horaire td{
+  text-align: center;
+  padding: 10px;
+}
+
+#horaire{
+  display: none;
+}
+
+#horaire h2{
+  font-size: 40px;
+}
+
+#horaire_portable h2{
+  font-size: 40px;
+}
+
+#gallery_joueurs img{
+  margin: 6px 4px;
+}
+
+#gallery_joueurs {
+  text-align: center;
+}
 
 
 /*===========================================================
@@ -358,12 +454,19 @@ button:focus{
 #footer{
   background-color:rgba(0, 0, 0, 0.6);
   text-align: center;
+  border-top: solid 3px black;
+  border-bottom: solid 3px black;
+  box-shadow: 5px 2px 20px 5px rgba(20, 0, 0, 0.2);
 }
 
 .footer-copyright{
-  background:rgba(0, 0, 0, 0.9);
+  background:rgba(0, 0, 0, 1);
 }
 
+
+.dropdown-content{
+  color: #f6861f;
+}
 /*=========================================================*/
 /*=========================================================*/
 /*=========================================================*/
@@ -379,13 +482,26 @@ button:focus{
 /*Format 750px*/
 @media screen and (min-width: 750px){
 
-  
+
+  /*===========================================================
+                            EQUIPE
+  ===========================================================*/
+
+  .article_equipe_actualite{
+    display:flex;
+  }
+
 
 }
 
 
 @media screen and (min-width: 989px){
 
+
+  #main_equipe{
+    margin-left: 15%;
+    margin-right: 15%;
+  }
 /*===========================================================
                           HEADER
 ===========================================================*/
@@ -444,6 +560,30 @@ button:focus{
   width:650px;
   box-shadow: 3px 5px 10px 3px rgba(0, 0, 0, 0.2);
 }
+
+
+
+/*===========================================================
+                          EQUIPE
+===========================================================*/
+
+#actualite article{
+  width:69%;
+}
+
+#actualite{
+  display: flex;
+}
+#horaire_portable{
+  display: none;
+}
+#horaire{
+  display:block;
+}
+
+
+
+
 
 
 
