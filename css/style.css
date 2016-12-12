@@ -390,13 +390,68 @@ a:hover{
 }
 
 
-/**/
+
+
+
+
+
+
+
+/*===========================================================
+                          NOTRE CLUB
+===========================================================*/
+
+
+
+
+#page_historique{
+  margin:100px 20px 60px;
+  position: relative;
+}
+
+#page_historique section h2{
+  font-size: 45px;
+  font-weight: bold;
+  color: #f6861f;
+}
+
+#page_historique section h3{
+  font-size: 30px;
+  font-weight: bold;
+}
+
+#page_historique section{
+  margin:20px 20px 110px;
+}
+
+.article_timeline{
+  margin:46px auto;
+  padding: 10px;
+  border-bottom: dotted 2px #f6861f;
+}
+
+.article_timeline p:first-line{
+  color: #f6861f;
+  font-weight: bold;
+}
+
+.timeline_droite{
+  text-align: right;
+  right:0;
+  margin: auto;
+}
+
+
+
+
 
 
 
 /*===========================================================
                            EQUIPE
 ===========================================================*/
+
+
 
 #actualite{
   margin:80px 20px 20px;
@@ -503,6 +558,21 @@ right:0;
 
 /*Format 750px*/
 @media screen and (min-width: 750px){
+
+
+/*===========================================================
+                            NOTRE CLUB
+===========================================================*/
+
+
+
+#page_historique{
+  width:750px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+
 
 
   /*===========================================================

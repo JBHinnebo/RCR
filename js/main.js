@@ -96,6 +96,9 @@ function showSlides() {
 
 // Sliders image centre
 
+
+
+
 // j'ai 4 image
 // je veux que les images défile de gauche à droite
 // Je veux qu'une

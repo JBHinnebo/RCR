@@ -63,14 +63,73 @@
 
         </header>
 
-    <main>
+    <main id="page_historique">
 
 
         <section>
-            <h2></h2>
-            <h3></h3>
-            <p>Créé en 1975, comparé à</p>
+            <h2>Historique du club</h2>
+            <h3> Rapide histoire du club, date et autre</h3>
         </section>
+
+        <section id="timeline">
+
+            <article class="article_timeline">
+                <h4>23 Octobre 1975</h4>
+                <p>Le club est créé par Lorem Ipsum> Il se place comme le numéro 1 des club de couture et>>>non, attend, se n'est pas vrai ça. Par contre on peut dire que la totalité des fonds lui fure versé. Et il y avait des joueurs!</p>
+            </article>
+
+            <article class="article_timeline">
+                <h4>29 Décembre 1977</h4>
+                <p>Le club passe en troisième division pointé 3! Inconcevable? En fait, si! C'est très simple: le croquemort à versé 74000 francs! </p>
+            </article>
+
+            <article class="article_timeline">
+                <h4>29 Février 1978</h4>
+                <p>Victoire au championnat des maron! le Nord champion des marroniers! </p>
+            </article>
+
+            <article class="article_timeline">
+                <h4>23 Octobre 1975</h4>
+                <p>Le club est créé par Lorem Ipsum> Il se place comme le numéro 1 des club de couture et>>>non, attend, se n'est pas vrai ça. Par contre on peut dire que la totalité des fonds lui fure versé. Et il y avait des joueurs!</p>
+            </article>
+
+            <article class="article_timeline">
+                <h4>29 Décembre 1977</h4>
+                <p>Le club passe en troisième division pointé 3! Inconcevable? En fait, si! C'est très simple: le croquemort à versé 74000 francs! </p>
+            </article>
+
+            <article class="article_timeline">
+                <h4>29 Février 1978</h4>
+                <p>Victoire au championnat des maron! le Nord champion des marroniers! </p>
+            </article>
+
+        </section>
+
+        <script>
+        // il faut que 1 article sur gagne la classe "timeline_droite"
+
+        // on crée une boucle pour parcourir chaque élément du DOM correspondant au article
+        var content = document.getElementsByTagName("article");
+
+        function organize(){
+
+             // on appelle l'index pour selectionner l'élément voulue
+            for(i=0; i< content.length; i++){
+               // Si l'index est paire, l'élément a la classe
+               if(i%2==0){
+                  content[i].className += " timeline_droite";
+               }
+               // Sinon, il ne la gagne pas
+
+           }
+        }
+
+        organize();
+
+
+        </script>
+
+
 
     </main>
 
