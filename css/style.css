@@ -38,6 +38,28 @@ a:hover{
   background: none;
 }
 
+.top_link{
+  position :fixed;
+  right				:	10px;
+  bottom				:	10px;
+  display			:	none;
+  padding			:	10px;
+  background		:	#666;
+  box-shadow: 2px 5px 6px rgba(0, 0, 0, 0.5);
+  opacity: 0.5;
+  z-index			:	2000;
+  color: #eee;
+  font-size: 20px;
+  transition: transform 0.4s,opacity 0.4s;
+}
+
+.top_link:hover{
+  transform: scale(1.1);
+  opacity:1;
+  background:	#f6861f;
+  opacity: 0.9;
+}
+
 /*===========================================================
                           HEADER
 ===========================================================*/
