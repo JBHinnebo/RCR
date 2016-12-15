@@ -102,3 +102,10 @@ function showSlides() {
 // j'ai 4 image
 // je veux que les images défile de gauche à droite
 // Je veux qu'une
+
+
+
+
+
+// si j'appuis sur le bouton avec la classe "button-collapse"
+//
