@@ -378,6 +378,7 @@ a:hover{
 }
 
 #galerie{
+  height:450px;
   width: auto;
   position: relative;
   overflow: hidden;
@@ -400,6 +401,7 @@ a:hover{
 }
 
 .carousel_intermediaire{
+  position: absolute;
   display:flex;
   width:5000px;
 }
