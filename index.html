@@ -14,6 +14,8 @@
         <!-- Place favicon.ico in the root directory -->
         <link type="text/css" rel="stylesheet" href="css/materialize.min.css"  media="screen,projection"/>
         <link href="https://fonts.googleapis.com/css?family=Delius+Unicase|Ravi+Prakash" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet">
+
 
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.8/css/materialize.min.css">
 
@@ -98,7 +100,7 @@
                         <h2>NUMERO UNO!</h2>
                         <h3>L'ascention de ROUBAIX</h3>
                         <p>Il est évident maintenant que l'équipe de rugby de Roubaix est une force de la nature. Mais maintenant, il est plus que probable que l'équipe soit maintenant numéro 1 de toute les division possible multiplié par 3 ...</p>
-                        <h4>Lire la suite...</h4>
+                        <h4><a href="">Lire la suite...</a></h4>
                     </div>
                 </article>
             </section>
@@ -283,15 +285,25 @@
 
             <section class="section_images">
 
-
-                    <!-- <img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" width="400px"/>
-                    <img src="img/15123260_1419990508029557_8695490703272763652_o.jpg" alt="" width="400px"/>
-                    <img src="img/15068560_1419990514696223_5986552351314924113_o.jpg" alt="" width="400px"/>
-                    <img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" width="400px"/>
-                    <img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" width="400px"/>
-                    <img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" width="400px"/> -->
+                <div id="galerie">
+                    <button class="suiv">&#10095;</button>
+                    <button class="prec">&#10094;</button>
+                    <div class="carousel_intermediaire">
+                        <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
+                        <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
+                        <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
+                        <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
+                        <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
+                        <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
+                        <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
+                        <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
+                        <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
+                        <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
+                    </div>
+                </div>
 
             </section>
+
 
             <section class="section_video section_orange">
 
@@ -355,10 +367,64 @@
 
         <script src="https://code.jquery.com/jquery-1.12.0.min.js"></script>
         <script>window.jQuery || document.write('<script src="js/vendor/jquery-1.12.0.min.js"><\/script>')</script>
+        <script src="http://cdnjs.cloudflare.com/ajax/libs/jquery.transit/0.9.9/jquery.transit.min.js"></script>
         <script src="js/plugins.js"></script>
         <script src="js/main.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
+        <script>
+
+
+
+        var slider = function(id){
+            self=this;
+            this.div = $(id);
+            this.slider = this.div.find(".carousel_intermediaire");
+            this.largeurCache = this.div.width();
+            this.largeur=0;
+            // on selecionne la largeur de chaque image
+            this.div.find('a').each(function(){
+                self.largeur += $(this).width();
+                // Ne pas oublier les padding et margin (ils contribuent à la largeur)
+                self.largeur += parseInt($(this).css("padding-left"));
+                self.largeur += parseInt($(this).css("padding-right"));
+                self.largeur += parseInt($(this).css("margin-left"));
+                self.largeur += parseInt($(this).css("margin-right"));
+            });
+            // on selectionne les boutons:
+            this.prec = this.div.find(".prec");
+            this.suiv = this.div.find(".suiv");
+            // on configure le saut dans les images
+            this.saut = this.largeurCache/2;
+            // nombre de saut d'image
+            this.nbEtapes = Math.ceil(this.largeur/this.saut - this.largeurCache/this.saut);
+            this.courant=0;
+
+            // ajout du comportement sur le bouton "suiv":
+            this.suiv.click(function(){
+                if(self.courant<=self.nbEtapes){
+                    self.courant++;
+                    self.slider.animate({ left:-self.courant*self.saut}, 1000);
+                }
+            });
+
+            // ajout du comportement sur le bouton "prec":
+            this.prec.click(function(){
+                if(self.courant>0){
+                    self.courant--;
+                    self.slider.animate({ left: -self.courant*self.saut}, 1000 );
+                }else{
+                    alert("finit");
+                }
+            });
+        }
+
+        $(document).ready(function(){
+            s = new slider("#galerie");
+        });
+
+
+        </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

@@ -25,7 +25,7 @@ $(window).resize( function() {
 
 $(document).ready(function(){
 
-   $('body').append('<a href="#top" class="top_link" title="Revenir en haut de page">Haut de Page</a>');
+   $('body').append('<a href="#top" class="top_link waves-light" title="Revenir en haut de page">Haut de Page</a>');
 
          $(window).scroll(function(){
          // Permet de remonter en haut de page.
@@ -73,39 +73,5 @@ function showDivs(n) {
 // SLiders automatic
 
 
-var slideIndex = 0;
-showSlides();
-
-function showSlides() {
-    var i;
-    var slides = document.getElementsByClassName("Slides");
-    for (i = 0; i < slides.length; i++) {
-       slides[i].style.display = "none";
-    }
-    slideIndex++;
-    if (slideIndex> slides.length) {
-        slideIndex = 1
-    }
-
-    slides[slideIndex-1].style.display = "block";
-
-    setTimeout(showSlides, 2000); // Change image every 2 seconds
-}
-
-
 
 // Sliders image centre
-
-
-
-
-// j'ai 4 image
-// je veux que les images défile de gauche à droite
-// Je veux qu'une
-
-
-
-
-
-// si j'appuis sur le bouton avec la classe "button-collapse"
-//
