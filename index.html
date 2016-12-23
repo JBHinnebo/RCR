@@ -66,7 +66,7 @@
           <nav id="navbar">
             <div class="nav-wrapper">
               <button href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></button>
-              <a href="#!" class="brand-logo"  id="position_brand-logo"><img src="img/logo_RCR.png" alt="" width="120px"></a>
+              <a href="index.html" class="brand-logo"  id="position_brand-logo"><img src="img/logo_RCR.png" alt="" width="120px"></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="index.html">Accueil</a></li>
                 <!-- Dropdown Trigger -->
@@ -100,7 +100,7 @@
                         <h2>NUMERO UNO!</h2>
                         <h3>L'ascention de ROUBAIX</h3>
                         <p>Il est évident maintenant que l'équipe de rugby de Roubaix est une force de la nature. Mais maintenant, il est plus que probable que l'équipe soit maintenant numéro 1 de toute les division possible multiplié par 3 ...</p>
-                        <h4><a href="">Lire la suite...</a></h4>
+                        <h4><a href="article.html">Lire la suite...</a></h4>
                     </div>
                 </article>
             </section>
@@ -295,6 +295,8 @@
                         <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
                         <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
                         <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
+                        <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
+                        <a href=""><img src="img/15129698_1419991001362841_8779231210069817471_o.jpg" alt="" /></a>
                     </div>
 
                     <button class="suiv">&#10095;</button>
@@ -314,11 +316,23 @@
 
             </section>
 
-            <section class="sliders_partenaires">
+            <section class="partenaires">
 
-                <ul>
+                <ul class="list_partenaires">
                     <li>
-                        <a href=""></a>
+                        <a href=""><img src="http://placehold.it/250x200" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="http://placehold.it/250x200" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="http://placehold.it/250x200" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="http://placehold.it/250x200" alt=""></a>
+                    </li>
+                    <li>
+                        <a href=""><img src="http://placehold.it/250x200" alt=""></a>
                     </li>
                 </ul>
 
@@ -373,7 +387,7 @@
         <script type="text/javascript" src="js/materialize.min.js"></script>
         <script>
 
-
+// SCRIPT DU CARROUSSEL DU MILIEU
 
         var slider = function(id){
             self=this;
@@ -401,7 +415,7 @@
 
             // ajout du comportement sur le bouton "suiv":
             this.suiv.click(function(){
-                if(self.courant<=self.nbEtapes){
+                if(self.courant<self.nbEtapes){
                     self.courant++;
                     self.slider.animate({ left:-self.courant*self.saut}, 1000);
                 }
@@ -412,8 +426,6 @@
                 if(self.courant>0){
                     self.courant--;
                     self.slider.animate({ left: -self.courant*self.saut}, 1000 );
-                }else{
-                    alert("finit");
                 }
             });
         }

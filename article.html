@@ -66,7 +66,7 @@
           <nav id="navbar">
             <div class="nav-wrapper">
               <button href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></button>
-              <a href="#!" class="brand-logo"  id="position_brand-logo"><img src="img/logo_RCR.png" alt="" width="120px"></a>
+              <a href="index.html" class="brand-logo"  id="position_brand-logo"><img src="img/logo_RCR.png" alt="" width="120px"></a>
               <ul class="right hide-on-med-and-down">
                 <li><a href="index.html">Accueil</a></li>
                 <!-- Dropdown Trigger -->
@@ -91,16 +91,20 @@
 
             <section>
 
-                <article>
-
-                    <h1>23 Octobre 2012</h1>
+                <article class="article_en_grand">
+                    <h1>Auteur de l'article</h1>
                     <h2>TITRE DE L'ARTICLE</h2>
-                    <h3>Auteur de l'article</h3>
+                    <h3>23 Octobre 2012</h3>
                     <h4>Pour commencer, une petite phrase d'introduction permettant de montrant en quelque lignes parfaitement objective la teneur de l'article ci dessous.</h4>
+                    <figure class="image_principale_article">
+                        <img align="middle" src="img/1374759_693057567389525_1897747654_n.jpg" alt="">
+                    </figure>
                     <p>L'article en question. Nous allons parler ici de la grandeur du Rugby Club de Roubaix. Je mettra bien du Lorem Ipsum histoire de meubler de façon plus interéssante 'article mais notre frmateur me l'a interdit. Normalement ça devrais aller. Bon aller je vais vous raconter l'histoire de Conan l'aventurier, héros magique des temps passés. Conan était un ...Ah, on m'annonce que personne n'en a rien à faire? Bon d'accord...</p>
-                    <h5>Suivant</h5>
-                    <h5>Précédent</h5>
-                    <h6>Retour à l'accueil</h6>
+                    <div>
+                        <a class="bouton_article" href="">Suivant</a>
+                        <a class="bouton_article" href="">Précédent</a>
+                    </div>
+                    <h6><a href="index.html">Retour à l'accueil</a></h6>
                 </article>
 
             </section>
@@ -151,59 +155,7 @@
         <script src="js/main.js"></script>
         <script type="text/javascript" src="https://code.jquery.com/jquery-2.1.1.min.js"></script>
         <script type="text/javascript" src="js/materialize.min.js"></script>
-        <script>
 
-
-
-        var slider = function(id){
-            self=this;
-            this.div = $(id);
-            this.slider = this.div.find(".carousel_intermediaire");
-            this.largeurCache = this.div.width();
-            this.largeur=0;
-            // on selecionne la largeur de chaque image
-            this.div.find('a').each(function(){
-                self.largeur += $(this).width();
-                // Ne pas oublier les padding et margin (ils contribuent à la largeur)
-                self.largeur += parseInt($(this).css("padding-left"));
-                self.largeur += parseInt($(this).css("padding-right"));
-                self.largeur += parseInt($(this).css("margin-left"));
-                self.largeur += parseInt($(this).css("margin-right"));
-            });
-            // on selectionne les boutons:
-            this.prec = this.div.find(".prec");
-            this.suiv = this.div.find(".suiv");
-            // on configure le saut dans les images
-            this.saut = this.largeurCache/2;
-            // nombre de saut d'image
-            this.nbEtapes = Math.ceil(this.largeur/this.saut - this.largeurCache/this.saut);
-            this.courant=0;
-
-            // ajout du comportement sur le bouton "suiv":
-            this.suiv.click(function(){
-                if(self.courant<=self.nbEtapes){
-                    self.courant++;
-                    self.slider.animate({ left:-self.courant*self.saut}, 1000);
-                }
-            });
-
-            // ajout du comportement sur le bouton "prec":
-            this.prec.click(function(){
-                if(self.courant>0){
-                    self.courant--;
-                    self.slider.animate({ left: -self.courant*self.saut}, 1000 );
-                }else{
-                    alert("finit");
-                }
-            });
-        }
-
-        $(document).ready(function(){
-            s = new slider("#galerie");
-        });
-
-
-        </script>
         <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
         <script>
             (function(b,o,i,l,e,r){b.GoogleAnalyticsObject=l;b[l]||(b[l]=

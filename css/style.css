@@ -1,12 +1,10 @@
 
-
 /*===========================================================
                           GENERAL
 ===========================================================*/
 
 body{
   background-color: #eee;
-  font-family: 'Roboto', sans-serif;
 }
 
 ul{
@@ -390,6 +388,11 @@ a:hover{
   position: absolute;
   height:100%;
   font-size: 40px;
+  transition: 0.4s;
+}
+
+.prec:hover{
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .suiv{
@@ -398,6 +401,11 @@ a:hover{
   position: absolute;
   height:100%;
   font-size: 40px;
+  transition: 0.4s;
+}
+
+.suiv:hover{
+  background-color: rgba(0, 0, 0, 0.2);
 }
 
 .carousel_intermediaire{
@@ -411,10 +419,16 @@ a:hover{
 }
 
 .carousel_intermediaire a img{
-  width:500px;
+  width:450px;
   height:auto;
   float: left;
   box-shadow: 3px 2px 3px rgba(0, 0, 0, 0.5);
+  transition: 0.3s;
+  margin-top: 45px;
+}
+
+.carousel_intermediaire a img:hover{
+  transform: scale(1.05);
 }
 
 /*LES VIDEOS*/
@@ -445,8 +459,15 @@ a:hover{
 }
 
 
+/*Les partenaires*/
+.list_partenaires{
+  display: flex;
+  justify-content: space-between;
+}
 
-
+.list_partenaires li{
+  margin: 30px;
+}
 
 
 
@@ -476,7 +497,7 @@ a:hover{
 }
 
 #page_historique section{
-  margin:20px 20px 110px;
+  margin:20px 20px 60px;
 }
 
 .article_timeline{
@@ -503,6 +524,103 @@ a:hover{
 }
 
 
+
+/*===========================================================
+                           ARTICLE
+===========================================================*/
+
+
+.article_en_grand{
+  padding:50px;
+  margin-bottom: 50px;
+  margin-top: 100px;
+}
+
+.article_en_grand h1{
+  font-size: 30px;
+  margin-bottom: -15px;
+}
+
+.article_en_grand h2{
+  text-align: center;
+  color:#eee;
+  background-color: #f6861f;
+  padding: 10px 20px;
+  font-size: 60px;
+  font-weight: bold;
+}
+
+.article_en_grand h3{
+  font-size: 25px;
+  margin-right: 50px;
+  color:#f6861f;
+  font-weight: bold;
+}
+
+.article_en_grand h4{
+  font-size: 27px;
+}
+
+.article_en_grand p{
+  font-size: 25px;
+}
+
+.article_en_grand p:first-line{
+  color:#f6861f;
+  font-weight: bold;
+}
+
+.article_en_grand div{
+  display: flex;
+  justify-content:center;
+  margin: auto;
+}
+
+.article_en_grand .bouton_article{
+  text-align: center;
+  padding: 10px 20px;
+  width:200px;
+  border: solid 3px #f6861f;
+  margin-right: 30px;
+  margin-bottom: 20px;
+  transition: 0.5s;
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.article_en_grand .bouton_article{
+  color:#f6861f;
+  transition: 0.5s;
+}
+
+.article_en_grand .bouton_article:hover{
+  color:white;
+}
+
+.article_en_grand .bouton_article:hover{
+  transform: scale(1.1);
+  background-color: #f6861f;
+}
+
+.article_en_grand h6{
+  text-align: center;
+  width: auto;
+  padding: 10px 20px;
+}
+
+.article_en_grand h6 a{
+  color:#f6861f;
+}
+
+.image_principale_article{
+  height:400px;
+  overflow: hidden;
+}
+.image_principale_article img{
+  display:block;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 
@@ -539,10 +657,11 @@ a:hover{
 
 #actualite article h3{
   font-size: 25px;
+  padding:20px;
 }
 
 #actualite article p{
-
+  font-size: 20px;
 }
 #horaire_portable{
   margin:80px 5px;
@@ -581,6 +700,10 @@ a:hover{
   text-align: center;
 }
 
+
+.equipe_gallery{
+  margin-left: 50px;
+}
 
 
 
@@ -634,7 +757,25 @@ a:hover{
   height: auto;
 }
 
+/* label focus color */
+ .input-field input:focus + label {
+   color: #f6861f !important;
+ }
+ /* label underline focus color */
+ .row .input-field input:focus {
+   border-bottom: 1px solid #f6861f !important;
+   box-shadow: 0 1px 0 0 #f6861f !important
+ }
 
+
+ .input-field textarea:focus + label {
+   color: #f6861f !important;
+ }
+ /* label underline focus color */
+ .row .input-field textarea:focus {
+   border-bottom: 1px solid #f6861f !important;
+   box-shadow: 0 1px 0 0 #f6861f !important
+ }
 /*===========================================================
                           FOOTER
 ===========================================================*/
@@ -643,6 +784,7 @@ a:hover{
 #footer{
   background-color:rgba(0, 0, 0, 0.6);
   text-align: center;
+  font-size: 20px;
   border-top: solid 3px black;
   border-bottom: solid 3px black;
   box-shadow: 5px 2px 20px 5px rgba(20, 0, 0, 0.2);
@@ -656,6 +798,16 @@ a:hover{
 .dropdown-content{
   color: #f6861f;
 }
+
+
+
+
+*{
+
+}
+
+
+
 /*=========================================================*/
 /*=========================================================*/
 /*=========================================================*/
@@ -698,6 +850,16 @@ a:hover{
 
 
 
+/*===========================================================
+                           CONTACT
+===========================================================*/
+
+
+.article_en_grand{
+  width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
   /*===========================================================
                             EQUIPE
@@ -856,6 +1018,16 @@ a:hover{
   margin: auto;
 }
 
+/*===========================================================
+                           CONTACT
+===========================================================*/
+
+
+.article_en_grand{
+  width: 950px;
+  margin-left: auto;
+  margin-right: auto;
+}
 
 
 /*===========================================================
